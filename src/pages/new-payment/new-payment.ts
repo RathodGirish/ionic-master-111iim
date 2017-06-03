@@ -19,7 +19,7 @@ Method : NewPaymentPage
 
 export class NewPaymentPage {
   public userSession: any;
-  public newPaymentObj = { "userId": "", "firstName": "", "middleName": "", "lastName": "", "payment": 0, "interest": "5", "paymentDate": "", "dueDate": "", "note": '', "agentName": "", "mobileNo": "", "mobileNo2": "", "isDeleted": false, "isActive": true };
+  public newPaymentObj = { "userId": "", "firstName": "", "middleName": "", "lastName": "", "payment": 0, "interest": 5, "paymentDate": "", "dueDate": "", "note": '', "agentName": "", "mobileNo": "", "mobileNo2": "", "isDeleted": false, "isActive": true };
 
   public statesCodes = [];
 
