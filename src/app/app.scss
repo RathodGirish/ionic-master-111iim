@@ -1,0 +1,315 @@
+.header-title{
+    font-size: 16px;
+    display: block;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.menu-inner{
+    .content, .item-block {
+        background-color: map-get($colors, dark);
+        color: map-get($colors, light);
+        box-shadow: 1px !important;
+    }
+
+    .activeHightlight {
+        background-color: #33CC99;
+    }
+
+    .item-inner{
+        border: 0px !important;
+    }
+}
+
+.sub-menus-list button{
+    margin-left: 10px;
+}
+
+ion-card{
+    box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+}
+.text-center{
+    text-align: center;
+}
+
+.page-title{
+    margin-left: 10px; 
+}
+
+.mrg0  {
+    margin: 0px !important;
+}
+
+.mrTB10{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.mrLR10{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.mrT5{
+    margin-top: 5px;
+}
+
+.mrB5{
+    margin-bottom: 5px;
+}
+
+.mrT10{
+    margin-top: 10px;
+}
+
+.mrB10{
+    margin-bottom: 10px;
+}
+
+.mrT15{
+    margin-top: 15px;
+}
+
+.mrB15{
+    margin-bottom: 15px;
+}
+
+.mrL5{
+    margin-left: 5px;
+}
+
+.mrL10  {
+    margin-left: 10px;
+}
+
+
+
+.pad0{
+    padding: 0px;
+}
+
+.pad5{
+    padding: 5px;
+}
+
+.pad10{
+    padding: 10px;
+}
+
+.pad15{
+    padding: 15px;
+}
+
+.fs10{
+    font-size: 10px;
+}
+
+.fs12{
+    font-size: 12px;
+}
+
+.fs15{
+    font-size: 15px;
+}
+
+.fs20{
+    font-size: 20px;
+}
+
+.fs25{
+    font-size: 25px;
+}
+
+.fs30{
+    font-size: 30px;
+}
+
+.pull-right{
+    float: right;
+}
+
+.pull-left{
+    float: left;
+}
+
+.text-blue{
+    color: #5b2596 !important;
+}
+
+.text-gray{
+    color: #333 !important;
+}
+
+.blue-card{
+    background-color: #EAFAF1;
+    // width: 95%;
+}
+
+.icon-border-div{
+    border: 1px solid #ddd;
+}
+
+form .input-addon{
+    border: 1px solid #ddd;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+.overflow-ellipsis{
+    text-overflow: ellipsis;
+    width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.inner-addon{
+    background-color: white; padding: 0px !important;
+    margin-top: 10px;
+
+    .left-addon, .right-addon{
+        margin-top:3px;
+    }
+}
+
+form .label-ios,form .datetime-ios {
+    margin: 2px 8px 3px 0;
+    font-size: 14px;
+}
+
+.border-for-textbox{
+    border: 1px;
+    border-style: ridge;
+}
+
+.page-content {
+    background: #CCCCCC;
+
+    .logo-row {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .content-box {
+        // padding: 20px 20px 0px 20px;
+        padding: 20px 2px 0px;
+    }
+
+    ion-row {
+        align-items: center;
+        text-align: center;
+    }
+
+    ion-item {
+        // border-radius: 30px !important;
+        padding-left: 12px !important;
+        font-size: 0.9em;
+        margin-top: 10px;
+        border: 1px solid #ffffff;
+        border-bottom: 0px !important;
+        box-shadow: none !important;
+        min-height: 30px;
+    }
+
+    .text-input-md{
+        margin: 8px;
+    }
+
+    ion-item ion-input,ion-item .label {
+        
+        padding-left:16px !important;
+    }
+
+    .has-icon{
+        width: 50%;
+    }
+
+    .input-icon{
+        width: 30%;
+    }
+
+    .item-block{
+        min-height: 30px;
+    }
+
+    .autocomplete-item{
+        padding-left: 6px !important;
+        font-size: 0.6em;
+        margin-bottom: 0px !important;
+        margin-top: 0px !important;
+        border: 1px solid #aaa !important;
+        box-shadow: 1px !important;
+    }
+
+    .searchbar-md .searchbar-search-icon{
+        left: 0px !important;
+    }
+
+    .searchbar-input{
+        padding-left: 25px !important;
+        font-size: 1.6em;
+    }
+
+    .autocomplete-list{
+        left: 0px;
+        position: absolute;
+        width: 100%;
+        z-index: 100;
+        max-height: 100px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .autocomplete-list .item-block{
+        min-height: 22px !important;
+    }
+
+    .autocomplete-list .item-block .label{
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .radius-0{
+        border-radius: 0px !important;
+    }
+
+    .action-col {
+        margin: 0px 16px 0px 16px;
+        padding-bottom: 20px;
+    }
+
+    .item-inner {
+        border-bottom-color: #ffffff !important;
+        box-shadow: none !important;
+    }
+
+    .success-btn {
+        background: #51CFB1;
+        border-radius: 30px !important;
+        border: 1px solid #ffffff;
+    }
+
+    .primary-btn {
+        color: #ffffff;
+        font-size: 0.8em;
+    }
+
+    .searchbar-md{
+        padding: 0px !important;
+    }
+
+    .label-md{
+        margin: 1px 8px 1px 0 !important;
+    }
+
+    ion-icon{
+        width: 100%;
+    }
+}
+
+
+

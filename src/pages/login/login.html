@@ -1,0 +1,27 @@
+<ion-content class="page-content" padding>
+  <h5 class="removePadding text-center">Admin Login</h5>
+  <div class="content-box contentBoxPadding">
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+            <ion-item>
+              <ion-input type="text" placeholder="Enter User Id" name="userId" [(ngModel)]="loginCredentials.userId" required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input type="password" placeholder="Enter Password" name="password" [(ngModel)]="loginCredentials.password" required></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row> 
+        <ion-col>
+          <ion-list inset>
+            <button ion-button class="btn" full type="submit" [disabled]="!loginForm.form.valid">Sign in</button>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>
