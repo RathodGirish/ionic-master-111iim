@@ -12,25 +12,20 @@ export class InterestApp {
   public togglePricebookSubMenu = false;
   public activePage:any = 'Dashboard';
   @ViewChild(Nav) nav: Nav;
-  public info: any = {};
+  public userSession: any = {};
  
-  public sidebarMenus: Array<{title: string, component: any, hasSubMenu: any, subMenus: any}>;
- 
-  constructor(private auth: AuthService, platform: Platform, splashScreen: SplashScreen, public menuController: MenuController) {
+  constructor(
+    public authService: AuthService, 
+    public platform: Platform, 
+    public splashScreen: SplashScreen, 
+    public menuController: MenuController) {
     platform.ready().then(() => {
       splashScreen.hide();
     });
 
-    this.info = this.auth.getUserInfo();
+    this.userSession = this.authService.getUserSessionInfo();
     // this.menuController.enable(false);
-    console.log(' auth ' + JSON.stringify(auth));
-    this.sidebarMenus = [
-      { title: 'Dashboard', component: 'Dashboard', hasSubMenu: false, subMenus: [] },
-      { title: 'Update Price', component: 'PricebookPage', hasSubMenu: false, subMenus: [] },
-      { title: 'Add Item', component: 'AddItemPage', hasSubMenu: false, subMenus: [] },
-      { title: 'Lottery/Lotto', component: 'ConfirmPackPage', hasSubMenu: true, subMenus: [] },
-    ];
-    this.activePage = this.sidebarMenus[0];
+    console.log(' auth ' + JSON.stringify(authService));
     this.activePage = 'Dashboard';
   }
 
@@ -53,7 +48,7 @@ export class InterestApp {
   }
 
   public logout() {
-    this.auth.logout().subscribe(succ => {
+    this.authService.logout().subscribe(succ => {
       this.nav.setRoot('LoginPage');
     });
   }

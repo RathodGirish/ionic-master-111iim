@@ -1,41 +1,56 @@
 <ion-header>
   
-  <ion-navbar>
+  <ion-navbar primary>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Logo here</ion-title>
+    <ion-title>
+      <span class='header-title pull-left'>Welcome, {{userSession.userName}}!</span>
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="card-background-page">
-  <h2 color="white" class='page-title'>Common tasks</h2>
+  <h2 color="white" class='page-title text-center'>Common Tasks</h2>
   <ion-grid>
     <ion-row>
       <ion-col col-6 class='card-col pointer'>
-        <ion-card (click)="redirectPage('priceBook')">
-          <div class="card-title">Manage Pricebook</div>
-          <img src="assets/img/pricebook.png" class="mrT10 img-responsive imageIcone" />
+        <ion-card class="blue-card" (click)="redirectPage('NewPaymentPage')">
+          <div class="card-title">New Payment</div>
+          <!--<img src="assets/img/pricebook.png" class="mrT10 img-responsive imageIcone" />-->
+          <div class="card-title">
+            <ion-icon ios="ios-card" md="md-card" class="custom-icon"></ion-icon>
+          </div>
         </ion-card>
       </ion-col>
       <ion-col col-6 class='card-col pointer'>
-        <ion-card (click)="redirectPage('ScratchOffReadings')">
-          <div class="card-title">Scratch-off readings</div>
-          <img src="assets/img/lottery.png" class="mrT10 img-responsive imageIcone"/>
+        <ion-card class="blue-card" (click)="redirectPage('SearchPage')">
+          <div class="card-title">Search</div>
+          <div class="card-title">
+            <ion-icon ios="ios-search" md="md-search" class="custom-icon"></ion-icon>
+          </div>
         </ion-card>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col col-6 class='card-col pointer'>
-        <ion-card>
+        <ion-card class="blue-card" (click)="redirectPage('NewPaymentPage')">
+          <div class="card-title">Reports</div>
+          <div class="card-title">
+            <ion-icon ios="ios-book" md="md-book" class="custom-icon"></ion-icon>
+          </div>
         </ion-card>
       </ion-col>
       <ion-col col-6 class='card-col pointer'>
-        <ion-card>
+        <ion-card class="blue-card" (click)="redirectPage('SearchPage')">
+          <div class="card-title">Running Interest</div>
+          <div class="card-title">
+            <ion-icon ios="ios-cloud-download" md="md-cloud-download" class="custom-icon"></ion-icon>
+          </div>
         </ion-card>
       </ion-col>
     </ion-row>
-    <ion-row>
+    <!--<ion-row>
       <ion-col col-6 class='card-col pointer'>
         <ion-card>
         </ion-card>
@@ -44,25 +59,7 @@
         <ion-card>
         </ion-card>
       </ion-col>
-    </ion-row>
+    </ion-row>-->
     
   </ion-grid>
 </ion-content>
-
-
-
-
-<!--
-<ion-content padding class="card-background-page">
-  <h2 color="white">Explore</h2>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <div>1 of 2</div>
-      </ion-col>
-      <ion-col>
-        <div>2 of 2</div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-content>-->

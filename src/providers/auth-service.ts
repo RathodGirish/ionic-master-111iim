@@ -67,9 +67,9 @@ export class AuthService {
 
   /*
   TODO : To Get User Information from localstorage
-  Method : getUserInfo
+  Method : getUserSessionInfo
   */
-  public getUserInfo(): User {
+  public getUserSessionInfo(): User {
     // return this.currentUser;
     return JSON.parse(localStorage.getItem('currentUser'))
   }

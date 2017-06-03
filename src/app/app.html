@@ -11,7 +11,11 @@
        Dashboard
       </button>
 
-      <button ion-item (click)="toggleSubMenu('Pricebook')">
+      <button menuClose ion-item [ngClass]="(activePage == 'Capital') ? 'activeHightlight' : ''" (click)="openPage('Capital', false)">
+       Enter Capital
+      </button>
+
+      <!--<button ion-item (click)="toggleSubMenu('Pricebook')">
        Pricebook <ion-icon *ngIf="!togglePricebookSubMenu" name="ios-arrow-forward" class='mrL5 pull-right'></ion-icon> <ion-icon *ngIf="togglePricebookSubMenu" name="ios-arrow-down" class='mrL5 pull-right'></ion-icon>
       </button>
       <ion-list class="sub-menus-list" [class.hide]="!togglePricebookSubMenu">
@@ -21,9 +25,9 @@
         <button menuClose ion-item [ngClass]="(activePage == 'PricebookPage') ? 'activeHightlight' : ''" (click)="openPage('PricebookPage', false); toggleSubMenu('Pricebook')">
           Update Price
         </button>
-      </ion-list>
+      </ion-list>-->
 
-      <button ion-item (click)="toggleSubMenu('Lottery')">
+      <!--<button ion-item (click)="toggleSubMenu('Lottery')">
        Lottery <ion-icon *ngIf="!toggleLotterySubMenu" name="ios-arrow-forward" class='mrL5 pull-right'></ion-icon> <ion-icon *ngIf="toggleLotterySubMenu" name="ios-arrow-down" class='mrL5 pull-right'></ion-icon>
       </button>
       <ion-list class="sub-menus-list" [class.hide]="!toggleLotterySubMenu">
@@ -39,7 +43,8 @@
         <button menuClose ion-item [ngClass]="(activePage == 'ScatchOffReportPage') ? 'activeHightlight' : ''" (click)="openPage('ScatchOffReportPage', true); toggleSubMenu('Lottery')">
           Scatch Off Report 
         </button>
-      </ion-list>
+      </ion-list>-->
+      
       <button menuClose ion-item (click)="logout()">
          Logout
       </button>

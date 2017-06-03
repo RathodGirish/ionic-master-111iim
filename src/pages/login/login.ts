@@ -16,7 +16,7 @@ Method : LoginPage
 export class LoginPage {
   public loading: Loading;
 
-  public loginCredentials = { userId: 'ash123', password: '111111' };
+  public loginCredentials = { userId: 'ash123', password: '111111', "userName": "Ashok Vala" };
   public typeList: any[] = [{ value: 1, text: 'option 1', checked: false }, { value: 2, text: 'option 2', checked: false }];
 
   constructor(
