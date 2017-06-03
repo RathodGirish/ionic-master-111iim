@@ -1,6 +1,5 @@
-import { Injectable, Inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 export class User {
@@ -17,37 +16,7 @@ export class User {
 @Injectable()
 export class AuthService {
   currentUser: User;
-  constructor( @Inject(Http) private http: Http) { }
-
-  /*
-  TODO : To Login User
-  Method : login
-  */
-  public login(credentials: any, callback) {
-    if (credentials.email === null || credentials.password === null) {
-      return Observable.throw("Please insert credentials");
-    } else {
-      let headers = new Headers({});
-      let options = new RequestOptions({ headers: headers });
-      this.http
-        .post('http://192.169.176.227/backofficeweb/', credentials, options)
-        .map(res => res.json())
-        .subscribe(
-        data => {
-          console.log("hello data called");
-          if (data.status == 'Success') {
-            callback(null, data);
-          } else {
-            console.log("hello null data called");
-            callback(null, data);
-          }
-        },
-        err => {
-          console.log("ERROR!: ", err);
-        }
-        );
-    }
-  }
+  constructor() { }
 
   /*
   TODO : To Registert User
