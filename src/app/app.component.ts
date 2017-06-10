@@ -28,11 +28,11 @@ export class InterestApp {
       splashScreen.hide();
       platform.ready().then(() => {
             let db = new SQLite();
-            db.("CREATE TABLE IF NOT EXISTS people (userId PRIMARY KEY, firstName TEXT, middleName TEXT, lastName TEXT, lastName TEXT, payment REAL, interest REAL, paymentDate TEXT, dueDate TEXT, note TEXT, agentName TEXT, mobileNo TEXT, mobileNo2 TEXT, isDeleted INTEGER, isActive INTEGER)", {}).then((data) => {
-                console.log("TABLE CREATED: ", data);
-            }, (error) => {
-                console.error("Unable to execute sql", error);
-            })
+            // db.("CREATE TABLE IF NOT EXISTS people (userId PRIMARY KEY, firstName TEXT, middleName TEXT, lastName TEXT, lastName TEXT, payment REAL, interest REAL, paymentDate TEXT, dueDate TEXT, note TEXT, agentName TEXT, mobileNo TEXT, mobileNo2 TEXT, isDeleted INTEGER, isActive INTEGER)", {}).then((data) => {
+            //     console.log("TABLE CREATED: ", data);
+            // }, (error) => {
+            //     console.error("Unable to execute sql", error);
+            // })
         });
     });
 
